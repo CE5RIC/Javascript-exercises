@@ -19,6 +19,8 @@
 
 document.getElementById("run").addEventListener("click", function() {
     getXmen();
+
+displayEachHero();
     
 })
 
@@ -30,6 +32,27 @@ async function getXmen() {
     let response = await data.json();
 
 console.log(response.heroes[0].alterEgo);  
+console.log(response);
+
+
+
+
+document.getElementById("target").innerHTML = response.heroes[0].name;
+document.getElementById("target1").innerHTML = response.heroes[1].name;
+
+document.getElementById("target2").innerHTML = response.heroes[2].name;
+
+document.getElementById("target3").innerHTML = response.heroes[3].name;
+
+document.getElementById("target4").innerHTML = response.heroes[4].name;
+
+
+}
+
+// Struggled with using the existing HTML to reproduce hero structure, created a couple of ID's to show heroes name
+
+
+function displayEachHero() {
 
 
 }
